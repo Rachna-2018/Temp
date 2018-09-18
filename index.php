@@ -37,8 +37,8 @@ if($method == 'POST')
 	     	if(isset($json->queryResult->parameters->ARTICLE))
 		{	$ARTICLE= $json->queryResult->parameters->ARTICLE; } else {$ARTICLE = '0';}
 	
-		if(isset($json->queryResult->parameters->my-action))
-		{	$my_previous_action = $json->queryResult->parameters->my-action; } else {$my_previous_action = "";}
+		if(isset($json->queryResult->parameters->myaction))
+		{	$my_previous_action = $json->queryResult->parameters->myaction; } else {$my_previous_action = "";}
 		
 		if(isset($json->queryResult->action))
 		{	$my_action = $json->queryResult->action; } else {$my_action = "";}
