@@ -73,7 +73,7 @@ if($method == 'POST')
 		if($FAMILY=="" ){$FAMILY='0';}
 		if($CATEGORY=="" ){$CATEGORY='0';}
 		if($ARTICLE=="" ){$ARTICLE='0';}
-		if($YR=="" )$YR='0';}
+		if($YR=="" ){$YR='0';}
 		if($MTH=="" ){$MTH='0';}
 		if($QTR=="" ){$QTR='0';}
 		
