@@ -7,6 +7,16 @@ if($method == 'POST')
 	$json = json_decode($requestBody);
 	$com = $json->queryResult->parameters->command;
 	$com = strtolower($com);
+	if(isset($json->queryResult->parameters->myaction))
+		{	$my_action = $json->queryResult->parameters->myaction; } else {$my_action = "";}
+	if(($com == 'liststates' || $com == 'shoplist' || $com == 'listcity' || $com == 'listfamily' || $com == 'listcategory' || $com == 'listarticle' || $com == 'listyear') && $my_action == 'amountsold')
+	{$com = "amountsold";}
+	
+	if(($com == 'liststates' || $com == 'shoplist' || $com == 'listcity' || $com == 'listfamily' || $com == 'listcategory' || $com == 'listarticle' || $com == 'listyear') && $my_action == 'qtysold')
+	{$com = "qtysold";}
+	
+	if(($com == 'liststates' || $com == 'shoplist' || $com == 'listcity' || $com == 'listfamily' || $com == 'listcategory' || $com == 'listarticle' || $com == 'listyear') && $my_action == 'margin')
+	{$com = "margin";}
 	
 		
 	
@@ -40,10 +50,10 @@ if($method == 'POST')
 		
 			/*$my_previous_com = $com;
 		
-		if(isset($json->queryResult->action))
-		{	$my_action = $json->queryResult->action; } else {$my_action = "";}
+		if(isset($json->queryResult->parameters->myaction))
+		{	$my_action = $json->queryResult->parameters->myaction; } else {$my_action = "";}
 		
-		if($my_action == 'PreviousContextTotSale'){$com = $my_previous_com;}
+		/*if($my_action == 'PreviousContextTotSale'){$com = $my_previous_com;}
 		if($my_action == 'PreviousContextQtySold'){$com = $my_previous_com;}
 		if($my_action == 'PreviousContextMargin'){$com = $my_previous_com;}*/
 	
