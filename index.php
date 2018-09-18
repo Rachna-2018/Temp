@@ -69,6 +69,15 @@ if($method == 'POST')
 		
 		if($CITY=="" ){	$CITY='0';}
 		if($STATE=="" ){$STATE='0';}
+		if($SHOPNAME=="" ){$SHOPNAME='0';}
+		if($FAMILY=="" ){$FAMILY='0';}
+		if($CATEGORY=="" ){$CATEGORY='0';}
+		if($ARTICLE=="" ){$ARTICLE='0';}
+		if($YR=="" )$YR='0';}
+		if($MTH=="" ){$MTH='0';}
+		if($QTR=="" ){$QTR='0';}
+		
+		
 		
 		$userespnose = array("PLEASEIGNORE", "IGNORE","IGNOREIT", "ANYVALUE","ANY","NOIDEA");
 		
