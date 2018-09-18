@@ -38,12 +38,14 @@ if($method == 'POST')
 		{	$ARTICLE= $json->queryResult->parameters->ARTICLE; } else {$ARTICLE = '0';}
 	
 		
-			$my_previous_action = $com;
+			/*$my_previous_com = $com;
 		
 		if(isset($json->queryResult->action))
 		{	$my_action = $json->queryResult->action; } else {$my_action = "";}
 		
-		if($my_action == 'PreviousContext'){$com = $my_previous_action;}
+		if($my_action == 'PreviousContextTotSale'){$com = $my_previous_com;}
+		if($my_action == 'PreviousContextQtySold'){$com = $my_previous_com;}
+		if($my_action == 'PreviousContextMargin'){$com = $my_previous_com;}*/
 	
 		$CITY= strtoupper($CITY);
 		$STATE= strtoupper($STATE);
