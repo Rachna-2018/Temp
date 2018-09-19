@@ -178,7 +178,7 @@ if($method == 'POST')
 			if($MTH != '0')	{      $dismth = " for month ";} else {$dismth = "";}
 			foreach ($someobj["results"] as $value) 
 			{
-				$speech .= $distext. $value["AMOUNT"].$disshop.$value["SHOP_NAME"].$discity.$value["CITY"].$disstate.$value["STATE"].$value["FAMILY_NAME"].$disfamily.$value["CATEGORY"].$discategory.$value["ARTICLE_LABEL"].$disarticle.$disqtr.$value["QTR"].$dismth.$value["MTH"].$disyear.$value["YR"];
+				$speech .= $distext. $value["AMOUNT"].$disshop.$value["SHOP_NAME"].$discity.$value["CITY"].$disstate.$value["STATE"]." ".$value["FAMILY_NAME"].$disfamily." ".$value["CATEGORY"].$discategory." ".$value["ARTICLE_LABEL"].$disarticle.$disqtr.$value["QTR"].$dismth.$value["MTH"].$disyear.$value["YR"];
 				$speech .= "\r\n";
 			 }
 			//if($speech != "") { $speech .= "I can drill down further\n";}
