@@ -300,7 +300,11 @@ if($method == 'POST')
 			$file = json_decode($test_file);
 			$weather_data = $file->weather[0]->description;
 			$temp =  1.8*($file->main->temp - 273) +32 ;
-			$speech = "Now the Weather in $city is $weather_data , The temperature is $temp F " ;
+			$speech = "Now the Weather in $CITY is $weather_data , The temperature is $temp F " ;
+			$speech .= "\r\n";
+			$speech .= "<a href='https://api.openweathermap.org/data/2.5/weather?q=$CITY&appid=4b75f2eaa9f9a62fe7309f06b84b69f9' target='_blank'>Click here to visit</a>";
+				
+			
 		}
 	}
 	
