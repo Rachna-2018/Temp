@@ -284,7 +284,7 @@ if($method == 'POST')
 	}
 	elseif ($com=='weahter')
 	{
-		elseif(strlen($CITY) > 1) 
+		if(strlen($CITY) > 1) 
 		{	 
 
 			$opts = array();
