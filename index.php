@@ -269,6 +269,41 @@ if($method == 'POST')
 			$speech .= "Which would you prefer?";
 			
 		}
+	elseif ($com=='showany')
+	{
+		if(isset($json->queryResult->parameters->show))
+		{	$show= $json->queryResult->parameters->show; } else {$show = '';}
+		if(strlen($show) > 1)
+		{
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, "https://www.google.com/search?q=$show");
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_exec($ch);
+		curl_close($ch);			
+		} 
+	}
+	elseif ($com=='weahter')
+	{
+		elseif(strlen($CITY) > 1) 
+		{	 
+
+			$opts = array();
+			$opts['http'] = array();
+			$opts['http']['method']="GET";
+			$opts['http']['header']="Accept-language: en\r\n"."Cookie: foo=bar\r\n";
+
+			$t1=stream_context_create($opts);
+
+			// Open the file using the HTTP headers set above
+			$test_file=file_get_contents("https://api.openweathermap.org/data/2.5/weather?q=$CITY&appid=4b75f2eaa9f9a62fe7309f06b84b69f9", false, $t1);
+
+			$file = json_decode($test_file);
+			$weather_data = $file->weather[0]->description;
+			$temp =  1.8*($file->main->temp - 273) +32 ;
+			$speech = "Now the Weather in $city is $weather_data , The temperature is $temp F " ;
+		}
+	}
+	
 		
 			
 	
