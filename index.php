@@ -269,7 +269,7 @@ if($method == 'POST')
 			$speech .= "Which would you prefer?";
 			
 		}
-	elseif ($com=='showany')
+	else if ($com=='showany')
 	{
 		if(isset($json->queryResult->parameters->show))
 		{	$show= $json->queryResult->parameters->show; } else {$show = '';}
@@ -282,7 +282,7 @@ if($method == 'POST')
 		curl_close($ch);			
 		} 
 	}
-	elseif ($com=='weahter')
+	else if ($com=='weather')
 	{
 		if(strlen($CITY) > 1) 
 		{	 
