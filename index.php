@@ -302,7 +302,7 @@ if($method == 'POST')
 			$temp =  1.8*($file->main->temp - 273) +32 ;
 			$speech = "Now the Weather in $CITY is $weather_data , The temperature is $temp F " ;
 			$speech .= "\r\n";
-			$link = "<a href="https://api.openweathermap.org/data/2.5/weather?q=$CITY&appid=4b75f2eaa9f9a62fe7309f06b84b69f9">Click here to visit</a>";
+			$link = "<a href=https://api.openweathermap.org/data/2.5/weather?q=$CITY&appid=4b75f2eaa9f9a62fe7309f06b84b69f9>Click here to visit</a>";
 			$speech .= $link;
 			
 				
